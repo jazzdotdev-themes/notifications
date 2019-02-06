@@ -1,0 +1,79 @@
+.pop_up__container
+  animation-name: slideInRight
+  -webkit-animation-name: slideInRight
+  animation-duration: 1s 
+  -webkit-animation-duration: 1s
+
+  animation-timing-function: ease-in-out
+  -web-kit-animation-timing-function: ease-in-out
+  
+@-webkit-keyframes slideInRight
+  from
+    -webkit-transform: translate3d(200%, 0, 0)
+    transform: translate3d(200%, 0, 0)
+
+  to
+    -webkit-transform: translate3d(0, 0, 0)
+    transform: translate3d(0, 0, 0)
+
+
+@keyframes slideInRight 
+  from
+    -webkit-transform: translate3d(200%, 0, 0)
+    transform: translate3d(200%, 0, 0)
+
+  to
+    -webkit-transform: translate3d(0, 0, 0)
+    transform: translate3d(0, 0, 0)
+
+
+@-webkit-keyframes slideOutRight
+  0%
+    -webkit-transform: translate3d(0, 0, 0)
+    transform: translate3d(0, 0, 0)
+    display: block
+  99%
+    -webkit-transform: translate3d(299%, 0, 0)
+    transform: translate3d(299%, 0, 0)  
+    visibility: hidden
+    display: none
+  100%
+    -webkit-transform: translateX(0)
+    transform: translateX(0)
+    display: none
+    visibility: hidden
+
+
+    
+
+@keyframes slideOutRight 
+  0%
+    -webkit-transform: translate3d(0, 0, 0)
+    transform: translate3d(0, 0, 0)
+    display: block
+  99%
+    -webkit-transform: translate3d(299%, 0, 0)
+    transform: translate3d(299%, 0, 0)  
+    visibility: hidden
+    display: none
+  100%
+    -webkit-transform: translateX(0)
+    transform: translateX(0)
+    display: none
+    visibility: hidden
+
+
+.revert_animation    
+
+  animation-name: slideOutRight
+  -webkit-animation-name: slideOutRight
+  
+  animation-duration: 1s 
+  -webkit-animation-duration: 1s
+  
+  animation-fill-mode: forwards
+  -webkit-animation-fill-mode: forwards
+
+  animation-timing-function: ease-in-out
+  -web-kit-animation-timing-function: ease-in-out
+

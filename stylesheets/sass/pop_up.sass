@@ -1,0 +1,59 @@
+$pop_up_width: 400px
+$pop_up_height: 40px
+
+.pop_up__container
+  width: $pop_up_width
+  height: $pop_up_height
+  background-color: white
+  border-radius: .5rem
+  z-index: 10
+  position: absolute
+  top: 10px
+  overflow: hidden
+  align-items: center
+  left: calc( 50% - ( #{$pop_up_width} / 2 ) )
+
+  .icon
+    padding: 10px
+    font-weight: bold
+    font-size: 2rem
+
+  .icon_grey
+    @extend .icon
+    background-color: #8795A1
+    color: #F8FAFC
+
+  .icon_red
+    @extend .icon
+    background-color: #CC1F1A
+    color: #F8FAFC    
+
+  .icon_yellow
+    @extend .icon
+    background-color: #FFED4A
+    color: #F8FAFC
+
+  .icon_green
+    @extend .icon
+    background-color: #1F9D55
+    color: #F8FAFC
+
+  .close_icon
+    @extend .icon
+    color: #22292F
+    &:hover
+      color: #3D4852
+
+
+  .message
+    font-size: .9rem
+    padding-left: 1px
+
+  .title 
+    @extend .message
+    font-weight: bold
+
+
+.input__hidden
+  display: none
+  visibility: hidden  

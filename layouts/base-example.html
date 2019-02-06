@@ -1,0 +1,16 @@
+  
+{% block style %}
+  {{ super() }}  
+
+  <!-- headers in the style block in base.html -->
+  {% include "headers/notifications_styles.html" %}
+
+{% endblock style %}
+
+{% block content %}
+  {{ super() }}
+
+  <!-- template can be added anywhere in the html body -->
+  {% include "chunks/info_pop_up.html" %}
+
+{% endblock content %}
