@@ -18,25 +18,13 @@ $pop_up_height: 40px
     font-weight: bold
     font-size: 2rem
 
-  .icon_grey
-    @extend .icon
-    background-color: #8795A1
-    color: #F8FAFC
+  $icon_colors: ( grey: #8795A1, red: #CC1F1A, yellow: #ffe711, green: #1F9D55 ,orange: #DE751F )
 
-  .icon_red
-    @extend .icon
-    background-color: #CC1F1A
-    color: #F8FAFC    
-
-  .icon_yellow
-    @extend .icon
-    background-color: #FFED4A
-    color: #F8FAFC
-
-  .icon_green
-    @extend .icon
-    background-color: #1F9D55
-    color: #F8FAFC
+  @each $name , $color in $icon_colors
+    .icon_#{"" + $name}
+      @extend .icon
+      background-color: $color
+      color: #F8FAFC
 
   .close_icon
     @extend .icon
@@ -51,6 +39,7 @@ $pop_up_height: 40px
 
   .title 
     @extend .message
+    padding-right: 2px
     font-weight: bold
 
 

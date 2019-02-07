@@ -1,0 +1,72 @@
+<input hidden type="checkbox" id="pop_up_notification">
+
+{# set popup_icon_color = "green" #}
+{# set popup_icon_img = "check" #}
+{# set popup_title = "Success" #}
+{# set popup_message = "You have a working pop up" #}
+
+<div pop_up id="pop_up">
+  {% if popup_icon_color == "grey" %}
+    <div pop_icon_grey>
+
+  {% elif popup_icon_color == "red" %}
+    <div pop_icon_red>
+
+  {% elif popup_icon_color == "yellow" %}
+    <div pop_icon_yellow>
+
+  {% elif popup_icon_color == "green" %}
+    <div pop_icon_green>
+
+  {% elif popup_icon_color == "orange" %}
+    <div pop_icon_orange>
+  
+  {% else %}
+
+    <div pop_icon_grey >
+
+  {% endif %}
+
+    {% if popup_icon_img == "info" %}
+      <i info_icon></i>
+
+    {%elif popup_icon_img == "check" %}
+      <i check_icon></i>
+
+    {%elif popup_icon_img == "warning" %}
+      <i warning_icon></i>
+
+    {%elif popup_icon_img == "error" %}
+      <i error_icon></i>
+
+    {% else %}
+      <i info_icon></i>
+
+    {% endif %}
+
+  </div>
+  <div message>
+    <p pop_title>
+      {% if popup_title%}
+        {{popup_title}}
+      {% else %}
+        Lorem
+      {% endif %}
+      
+    </p>
+    <p pop_message>
+      {% if popup_title%}
+        {{popup_message}}
+      {% else %}
+        Sunt dolorea amet quis id id.
+      {% endif %}
+    </p>
+
+  </div>
+  <div close_cont>
+    <label for="pop_up_notification">
+      <i close_icon> </i>
+
+    </label>
+  </div>
+</div>
